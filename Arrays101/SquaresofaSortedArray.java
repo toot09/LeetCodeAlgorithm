@@ -1,31 +1,46 @@
 class SquaresofaSortedArray {
     public int[] sortedSquares(int[] A) {
-        
-        int len = A.length;
-        int[] B = new int[len];
-
-        for(int i=0;i<len;i++){
-            int x = A[i]*A[i];
-            if(i==0){
-                B[0] = x;
-            } else {
-                for(int k=0;k<i;k++){
-                  boolean chk = true;
-                    if(x<B[k]) {
-                        for(int j=len-2;j>=k;j--){
-                            B[j+1] = B[j];
-                        }
-                        B[k] = x;
-                        chk = false;
-                        break;
-                    }
-                  if(chk){
-                    B[i] = x;
-                  }
-                }
-            }
-        }
-        
-        return B;
+        squared(A);
+        //sortSelect(A,0,A.length-1);
+        sortBubble(A,0,A.length-1);
+        return A;
     }
+    
+  private static void squared(int[] A) {
+    for(int i = 0 ; i < A.length ; i++){
+      A[i] = A[i]*A[i];
+    }
+  }
+
+  private static void swap(int[] A, int start, int min_index) {
+    int tmp = A[start];
+    A[start] = A[min_index];
+    A[min_index] = tmp;
+  }
+
+  private static void sortSelect (int[] A, int start, int end){
+    if(start==end) {
+      return;
+    }
+    int min_index = start;
+    for(int i = start+1 ; i<=end ; i++){
+      if(A[i] < A[min_index]) {
+        min_index = i;
+      }
+    }
+    swap(A,start,min_index);
+    sortSelect(A,start+1,end);
+  }
+
+  private static void sortBubble(int[] A, int start, int end){
+    if(start==end) {
+      return;
+    }
+    for(int i = start ; i < end ; i++) {
+      if(A[i]>A[i+1]) {
+        swap(A,i,i+1);
+      }
+    }
+    sortBubble(A,start,end-1);
+  }
 }
