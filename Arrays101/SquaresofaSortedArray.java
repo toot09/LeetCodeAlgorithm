@@ -1,3 +1,27 @@
+//2020-07-02 in-place 사용
+class SquaresofaSortedArray {
+    public int[] sortedSquares(int[] A) {
+        for(int i=0;i<A.length;i++) {
+            int min_index = i;
+            for(int j=i;j<A.length;j++) {
+                if(A[min_index]*A[min_index]>A[j]*A[j]){
+                    min_index = j;
+                }
+            }
+            if(i!=min_index) {
+                int tmp = A[i];
+                A[i] = A[min_index]*A[min_index];
+                A[min_index] = tmp;
+            } else {
+                A[i] = A[i]*A[i];
+            }
+
+        }
+        return A;
+    }
+}
+
+/** sorting 기법 사용
 class SquaresofaSortedArray {
     public int[] sortedSquares(int[] A) {
         squared(A);
@@ -44,3 +68,5 @@ class SquaresofaSortedArray {
     sortBubble(A,start,end-1);
   }
 }
+
+*/
