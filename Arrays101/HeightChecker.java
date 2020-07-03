@@ -1,17 +1,12 @@
-
-class Main {
-  public static void main(String[] args) {
-  
-    int[] A = {1,1,4,2,1,3};
-    System.out.print(heightChecker(A));
-    
-    
-  }
-
-   private static int heightChecker(int[] heights) {
+class HeightChecker {
+    public int heightChecker(int[] heights) {
         int[] arr = new int[heights.length];
-        arr = heights;
-        sortArray(arr,0,heights.length-1);
+        // 다 입력해준다.
+        // arr = heigth 하면 주소값을 입력하기 때문에 같은 array
+        for(int i=0 ; i<arr.length ; i++) {
+            arr[i] = heights[i];
+        }
+        sortArray(arr,0,arr.length-1);
         return result(heights,arr);
     }
     private static void sortArray(int[] A,int start, int end) {
@@ -32,16 +27,13 @@ class Main {
         A[min_index] = A[start];
         A[start] = tmp;
     }
-    private static int result(int[] A, int[] B) {
+    private int result(int[] A, int[] B) {
         int cnt = 0;
         for(int i=0;i<A.length;i++) {
-          System.out.println("@@ : "+A[i]);
-          System.out.println("## : "+B[i]);
             if(A[i]!=B[i]) {
                 cnt++;
             }
         }
         return cnt;
     }
-
 }
