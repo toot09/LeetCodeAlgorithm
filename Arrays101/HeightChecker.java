@@ -1,3 +1,19 @@
+/* 함수사용 간단 방법
+class HeightChecker {
+    public int heightChecker(int[] heights) {
+        int cnt = 0;
+        int[] arr = heights.clone();
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length;i++) {
+            if(heights[i]!=arr[i]){
+                cnt++;
+            }
+        }
+        return cnt;
+    }
+}
+*/
+
 class HeightChecker {
     public int heightChecker(int[] heights) {
         int[] arr = new int[heights.length];
