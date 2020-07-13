@@ -1,6 +1,6 @@
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * class ListNode {
  *     int val;
  *     ListNode next;
  *     ListNode(int x) {
@@ -8,7 +8,7 @@
  *         next = null;
  *     }
  * }
- */
+ */ 
  /*
   Brain Storming 한 결과가 처음으로 가장 효율적인 방법이었다
   뿌듯하지만 조금 이해가 안가는 부분이 있는데, size를 구하는 쪽에서
@@ -16,6 +16,17 @@
   왜 그럴까?
  */ 
 public class IntersectionofTwoLinkedLists {
+
+// Definition for singly-linked list.
+  public class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) {
+          val = x;
+          next = null;
+     }
+ }
+
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         int sizeA = 0;
         int sizeB = 0;

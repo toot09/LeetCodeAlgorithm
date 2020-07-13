@@ -22,6 +22,18 @@ runner = A + X + B*n
 A + X = B
 */
 public class LinkedListCycleII {
+
+// Definition for singly-linked list.
+  public class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) {
+          val = x;
+          next = null;
+     }
+ }
+
+
     public ListNode detectCycle(ListNode head) {
         if(head == null) return null;
         ListNode walker = head;
