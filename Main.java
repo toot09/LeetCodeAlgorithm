@@ -11,7 +11,7 @@ class Main {
   int[] nums = {1,2,3};
   int[] tmp = new int[5];
   for(int i : tmp) {
-    System.out.println(i);
+    System.out.println(i); 
   }
   
 
