@@ -1,33 +1,28 @@
 import java.util.*;
 
 class Main {
+  
   public static void main(String[] args) {
-  
-  //System.out.println("Compile Complete!");
-  List<List<Integer>> tmp = new ArrayList<>();
-  
+    String haystack = "hello";
+    String needle = "el";    
+    System.out.println(strStr(haystack,needle));
+    
+    System.out.println("##### Compile Complete! #####");
+  }
+  /*
+  Example 1:
+  Input: ["flower","flow","flight"]
+  Output: "fl"
 
- /* Your MyLinkedList object will be instantiated and called as such:
- */
- /*
-  MyLinkedList obj = new MyLinkedList();
-  obj.addAtHead(1);
-  obj.addAtTail(3);
-  System.out.println(obj.get(0));
-  System.out.println(obj.get(1));
-  System.out.println("@@@@");
-  
-  obj.addAtIndex(1,2);
-  System.out.println(obj.get(0));
-  System.out.println(obj.get(1));
-  System.out.println(obj.get(2));
-  
-  //obj.deleteAtIndex(1);
-  //System.out.println(obj.get(1));
- */
-
+  Example 2:
+  Input: ["dog","racecar","car"]
+  Output: ""
+  Explanation: There is no common prefix among the input strings.
+  */
+  public static String longestCommonPrefix(String[] strs) {
+    
+    return ""; 
   }
 
-
-
 }
+
