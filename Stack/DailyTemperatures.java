@@ -1,4 +1,19 @@
-
+class Solution {
+    public int[] dailyTemperatures(int[] T) {
+        int[] ret = new int[T.length];
+        int[] tmp = new int[T.length];
+        int idx = -1;
+        for(int i=0 ; i<T.length ; i++) {
+            while(idx >= 0 && T[i] > T[tmp[idx]]) {
+                ret[tmp[idx]] = i - tmp[idx];
+                idx--;
+            }
+            tmp[++idx] = i;
+        }
+        return ret;
+    }
+}
+/*
 class DailyTemperatures {
     public int[] dailyTemperatures(int[] T) {
         if(T.length == 0) return null;
@@ -15,3 +30,4 @@ class DailyTemperatures {
         return T;
     }
 }
+*/
