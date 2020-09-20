@@ -4,7 +4,7 @@ import java.util.*;
 */
 //Runtime: 1 ms (100%)
 //Memory Usage: 36.8 MB (63.58)
-class ReverseInteger_TopInterviewQuestsions {
+class ReverseInteger_TopInterviewQuestsions_String {
     public int reverse(int x) { 
         Queue<Integer> q = new LinkedList<>();
         int ret = 0;
