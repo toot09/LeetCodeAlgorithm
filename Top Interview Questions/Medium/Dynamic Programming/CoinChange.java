@@ -1,6 +1,26 @@
 import java.util.*;
+
+//Runtime: 11 ms (88.24%)
+//Memory Usage: 38 MB
+class CoinChange {
+    public int coinChange_TIQ(int[] coins, int amount) {
+        int[] amt = new int[amount+1];
+        Arrays.fill(amt,amount+1);
+        amt[0] = 0;
+        for(int i=1 ; i<amt.length ; i++) {
+            for(int j=0 ; j<coins.length ; j++) {
+                if(i-coins[j]>=0) {
+                    amt[i] = Math.min(amt[i-coins[j]]+1,amt[i]);
+                }
+            }
+        }
+        return amt[amount]==amount+1?-1:amt[amount];
+    }
+}
+
 //Runtime: 94 ms (7.38%)
 //Memory Usage: 39.8 MB
+/*
 class CoinChange {
     public int coinChange(int[] coins, int amount) {
         if(amount==0) return 0;
@@ -30,3 +50,4 @@ class CoinChange {
         return -1;
     }
 }
+*/

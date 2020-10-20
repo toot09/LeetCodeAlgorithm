@@ -1,7 +1,7 @@
 //Runtime: 1 ms (94.17%)
 //Memory Usage: 40.7 MB
 class JumpGame {
-    public boolean canJump(int[] nums) {
+    public boolean canJump_TIQ(int[] nums) {
         int i=0;
         for(int reach=0; i<nums.length && i<=reach ; i++) {
             reach = Math.max(i+nums[i],reach);

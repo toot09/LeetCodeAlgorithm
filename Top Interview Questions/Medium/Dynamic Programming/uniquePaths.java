@@ -1,7 +1,7 @@
 //Runtime: 0 ms (100%)
 //Memory Usage: 35.9 MB
-class uniquePaths {
-    public int uniquePaths(int m, int n) {
+class uniquePaths_TIQ {
+    public int uniquePaths_TIQ(int m, int n) {
         int[][] map = new int[m][n];
         for(int i=0 ; i<m ; i++) {
             for(int j=0 ; j<n ; j++) {

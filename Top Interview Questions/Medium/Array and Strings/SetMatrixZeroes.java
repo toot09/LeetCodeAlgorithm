@@ -2,7 +2,7 @@ import java.util.*;
 
 //Runtime: 1 ms (97.51%)
 //Memory Usage: 40.3 MB (93.61%)
-class SetMatrixZeroes {
+class SetMatrixZeroes_TIQ {
     public void setZeroes(int[][] matrix) {
         Set<Integer> hs = new HashSet<>();
         int[] zeros = new int[matrix[0].length];
