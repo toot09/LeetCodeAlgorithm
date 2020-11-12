@@ -1,7 +1,7 @@
 import java.util.*;
 //Runtime: 1 ms (91.05%)
 //Memory Usage: 39.1 MB
-class MaximumProductSubarray {
+class MaximumProductSubarray_TIQ {
     public int maxProduct(int[] nums) {
         int[][] arr = new int[nums.length][2];
         int ret = Integer.MIN_VALUE;

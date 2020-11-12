@@ -1,4 +1,4 @@
-class ProductOfArrayExceptSelf {
+class ProductOfArrayExceptSelf_TIQ {
     public int[] productExceptSelf(int[] nums) {
         int[] ret = new int[nums.length];
         ret[0] = 1;
