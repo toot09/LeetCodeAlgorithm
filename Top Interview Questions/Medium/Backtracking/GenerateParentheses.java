@@ -1,6 +1,26 @@
-import java.util.*;
+import java.util.*;//Runtime: 1 ms (82.13%)
+//Memory Usage: 38.8 MB
+class GenerateParentheses_TIQ {
+    public List<String> generateParenthesis(int n) {
+        List<String> ret = new ArrayList<>();
+        if(n <= 0) return ret;
+        String s ="";
+        backtracking(ret,s,0,0,n);
+        return ret;
+    }
+    public static void backtracking(List<String> ret, String s, int open, int close, int n) {
+        if(s.length()==n*2) {
+            ret.add(s);
+            return;
+        }
+        if(open<n) backtracking(ret,s+"(",open+1,close,n);
+        if(open>close) backtracking(ret,s+")",open,close+1,n);
+    }
+}
+
 //Runtime: 39 ms (Out Of Lange... Shit)
 //Memory Usage: 39.3 MB
+/*
 class GenerateParentheses_TIQ {
     public List<String> generateParenthesis(int n) {
         List<String> ret = new ArrayList<>();
@@ -30,7 +50,7 @@ class GenerateParentheses_TIQ {
         return ret;
     }
 }
-
+*/
 //Runtime: 407 ms (?)
 //Memory Usage: 39.6 MB
 /*
