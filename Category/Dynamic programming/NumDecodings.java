@@ -1,6 +1,6 @@
 // Basic of dp
 // make +1 length array. and Thinking about making zero index data is kick in my opinion.
-class numDecodings_category {
+class NumDecodings_category {
   public int numDecodings(String s) {
     if(s.length() == 0 || s == null) return 0;
     int[] dp = new int[s.length() + 1];
