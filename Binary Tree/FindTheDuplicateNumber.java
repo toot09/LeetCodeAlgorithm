@@ -3,6 +3,17 @@
 // Comment : Easy
 // url : https://leetcode.com/problems/find-the-duplicate-number/
 
+class FindTheDuplicateNumber {
+public int FindTheDuplicateNumber(int[] nums) {
+        int len = nums.length-1;
+        int[] arr = new int[len];
+        for(int num : nums) {
+            if(arr[num-1]++>0) return num;
+        }
+        return -1;
+    }
+}
+/*
 import java.util.*;
 class FindTheDuplicateNumber {
     public int findDuplicate(int[] nums) {
@@ -15,3 +26,5 @@ class FindTheDuplicateNumber {
         return nums[idx];
     }
 }
+
+*/
